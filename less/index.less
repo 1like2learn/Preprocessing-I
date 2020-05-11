@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -20,9 +21,10 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
+	border: grey 2px solid;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -57,3 +59,189 @@ html, body {
     height: 100%;
 }
 
+//Varriables
+@main-color:rgb(209, 228, 248);
+@accent-color: rgb(202, 214, 226);
+@main-font:'Lato', sans-serif;
+
+//Mixins
+.nav-flex(){
+	display: flex;
+	justify-content: space-between;
+}
+.hover-border(){
+	&:hover{
+	border: 2px solid black;
+	}
+}
+
+//Main Styles
+div.container{
+	padding: 0 5%;
+	max-width: 1200px;
+	margin: 0 auto;
+	//Nav Bar
+	.top-nav{
+		display: flex;
+		justify-content: end;
+		padding: 2% 0;	
+		@media(max-width:500px){
+			justify-content: space-evenly;
+
+		}//media query
+		nav{
+			.nav-flex();
+			width: 35%;
+			font-family: @main-font;
+			@media(max-width: 500px){
+				width: 100%;
+			}//media query
+			a{
+				text-decoration: none;
+				border: 2px solid white;
+				padding: 2%;
+				.hover-border();
+				&:link{
+					color:black;
+				}//:link
+				&:visited{
+					color:black;
+				}//:visited
+			}//a
+		}//nav
+	}//top-nav
+
+	//Header
+
+	header{
+		background-color: @main-color;
+		padding: 6% 3%;
+		img{
+			width: 100%;
+			image-orientation: from-image;
+		}//img
+		div.title{
+			h1{
+				font-size:3rem;
+				padding: 1% 0;
+			}//h1
+			h2{
+				font-size: 1.3rem;
+				padding: 2% 0;
+			}//h2
+		}//div.title
+		hr{
+			border-top:1px solid @accent-color;
+		}//hr
+		div.collab-part{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			font-family: @main-font;
+			p{
+				margin: 2% 0;
+				font-size: 1.1rem;
+			}//p
+			a{
+				background-color: slategray;
+				color: white;
+				padding: 1%;
+				border: 2px solid @accent-color;
+				border-radius: 5px;
+				.hover-border();
+				&:hover{
+					background-color: white;
+					color: black;
+				}//:hover
+			}//a
+		}//div.collab-part
+
+	}
+
+	//Section1
+	.section1{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 3% 0;
+		.paragraph{
+			width: 48%;
+			@media(max-width:500px){
+				width: 98%;
+			}
+			h2{
+				font-size: 1.6rem;
+				padding: 2% 0;
+			}//h2
+			
+			p{
+				
+				font-family: @main-font;
+				line-height: 1.25;
+			}
+		}//.paragraph
+		.list{
+			width: 48%;
+			@media(max-width:500px){
+				width: 98%;
+			}
+			h3{
+				font-size: 1.3rem;
+				padding: 2% 0;
+			}//h3
+			li{
+				list-style: none;
+				ul{
+					
+					font-family: @main-font;
+					padding: 2% 3%;
+					border: 1px solid @accent-color;
+					border-bottom: 0;
+				}//ul
+				
+			}//li
+			li:last-child{
+				ul{
+					border-bottom: 1px solid @accent-color;
+				}//ul
+			}//li:last-child
+		}//.list
+	}//.section1
+
+	//Section2
+	.section2{
+		padding-bottom: 3%;
+		h3{
+			font-size: 1.3rem;
+			padding: 2% 0;
+		}//h2
+		table{
+			border-top: 1px solid @accent-color;
+			width: 100%;
+			font-family: @main-font;
+			tr{
+				background-color:@main-color;
+				th{
+					font-weight: bold;
+					text-align: start;
+					padding:1%;
+				}//th
+				td{
+					padding:1%;
+				}//td
+			}//tr
+			tr:nth-child(odd){
+				background-color: white;
+			}//tr:nth-child
+		}//table
+	}//.section2
+}//container div
+//Footer
+footer{
+	background-color: slategray;
+	height: 10%;
+	p{
+		padding: 2%;
+		text-align: center;
+	}//p
+}//footer

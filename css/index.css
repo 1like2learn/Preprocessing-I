@@ -1,1 +1,307 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+  border: grey 2px solid;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+div.container {
+  padding: 0 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+div.container .top-nav {
+  display: flex;
+  justify-content: end;
+  padding: 2% 0;
+}
+@media (max-width: 500px) {
+  div.container .top-nav {
+    justify-content: space-evenly;
+  }
+}
+div.container .top-nav nav {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  font-family: 'Lato', sans-serif;
+}
+@media (max-width: 500px) {
+  div.container .top-nav nav {
+    width: 100%;
+  }
+}
+div.container .top-nav nav a {
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 2%;
+}
+div.container .top-nav nav a:hover {
+  border: 2px solid black;
+}
+div.container .top-nav nav a:link {
+  color: black;
+}
+div.container .top-nav nav a:visited {
+  color: black;
+}
+div.container header {
+  background-color: #d1e4f8;
+  padding: 6% 3%;
+}
+div.container header img {
+  width: 100%;
+  image-orientation: from-image;
+}
+div.container header div.title h1 {
+  font-size: 3rem;
+  padding: 1% 0;
+}
+div.container header div.title h2 {
+  font-size: 1.3rem;
+  padding: 2% 0;
+}
+div.container header hr {
+  border-top: 1px solid #cad6e2;
+}
+div.container header div.collab-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Lato', sans-serif;
+}
+div.container header div.collab-part p {
+  margin: 2% 0;
+  font-size: 1.1rem;
+}
+div.container header div.collab-part a {
+  background-color: slategray;
+  color: white;
+  padding: 1%;
+  border: 2px solid #cad6e2;
+  border-radius: 5px;
+}
+div.container header div.collab-part a:hover {
+  border: 2px solid black;
+}
+div.container header div.collab-part a:hover {
+  background-color: white;
+  color: black;
+}
+div.container .section1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 3% 0;
+}
+div.container .section1 .paragraph {
+  width: 48%;
+}
+@media (max-width: 500px) {
+  div.container .section1 .paragraph {
+    width: 98%;
+  }
+}
+div.container .section1 .paragraph h2 {
+  font-size: 1.6rem;
+  padding: 2% 0;
+}
+div.container .section1 .paragraph p {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.25;
+}
+div.container .section1 .list {
+  width: 48%;
+}
+@media (max-width: 500px) {
+  div.container .section1 .list {
+    width: 98%;
+  }
+}
+div.container .section1 .list h3 {
+  font-size: 1.3rem;
+  padding: 2% 0;
+}
+div.container .section1 .list li {
+  list-style: none;
+}
+div.container .section1 .list li ul {
+  font-family: 'Lato', sans-serif;
+  padding: 2% 3%;
+  border: 1px solid #cad6e2;
+  border-bottom: 0;
+}
+div.container .section1 .list li:last-child ul {
+  border-bottom: 1px solid #cad6e2;
+}
+div.container .section2 {
+  padding-bottom: 3%;
+}
+div.container .section2 h3 {
+  font-size: 1.3rem;
+  padding: 2% 0;
+}
+div.container .section2 table {
+  border-top: 1px solid #cad6e2;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+div.container .section2 table tr {
+  background-color: #d1e4f8;
+}
+div.container .section2 table tr th {
+  font-weight: bold;
+  text-align: start;
+  padding: 1%;
+}
+div.container .section2 table tr td {
+  padding: 1%;
+}
+div.container .section2 table tr:nth-child(odd) {
+  background-color: white;
+}
+footer {
+  background-color: slategray;
+  height: 10%;
+}
+footer p {
+  padding: 2%;
+  text-align: center;
+}
