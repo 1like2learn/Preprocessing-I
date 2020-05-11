@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -133,4 +133,137 @@ table {
 html,
 body {
   height: 100%;
+}
+.container {
+  padding: 0 5%;
+}
+.top-nav {
+  display: flex;
+  justify-content: end;
+  padding: 2% 0;
+}
+.top-nav nav {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+.top-nav nav a {
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 2%;
+}
+.top-nav nav a:link {
+  color: black;
+}
+.top-nav nav a:visited {
+  color: black;
+}
+.top-nav nav a:hover {
+  border: 2px solid black;
+}
+header {
+  background-color: #d1e4f8;
+  padding: 6% 3%;
+}
+header img {
+  width: 40%;
+  image-orientation: from-image;
+}
+header div.title h1 {
+  font-size: 3rem;
+  padding: 1% 0;
+}
+header div.title h2 {
+  font-size: 1.3rem;
+  padding: 2% 0;
+}
+header hr {
+  border-top: 1px solid #cad6e2;
+}
+header div.collab-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header div.collab-part p {
+  margin: 2% 0;
+  font-size: 1.1rem;
+}
+header div.collab-part a {
+  background-color: slategray;
+  color: white;
+  padding: 1%;
+  border: 2px solid #cad6e2;
+  border-radius: 5px;
+}
+header div.collab-part a:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 0;
+}
+.section1 .paragraph {
+  width: 48%;
+}
+.section1 .paragraph h2 {
+  font-size: 1.6rem;
+  padding: 2% 0;
+}
+.section1 .list {
+  width: 48%;
+}
+.section1 .list h3 {
+  font-size: 1.3rem;
+  padding: 2% 0;
+}
+.section1 .list li {
+  list-style: none;
+}
+.section1 .list li ul {
+  padding: 2% 3%;
+  border: 1px solid #cad6e2;
+  border-bottom: 0;
+}
+.section1 .list li:last-child ul {
+  border-bottom: 1px solid #cad6e2;
+}
+.section2 {
+  padding-bottom: 3%;
+}
+.section2 h3 {
+  font-size: 1.3rem;
+  padding: 2% 0;
+}
+.section2 p {
+  line-height: 2rem;
+}
+.section2 table {
+  border-top: 1px solid #cad6e2;
+  width: 100%;
+}
+.section2 table tr {
+  background-color: #cad6e2;
+}
+.section2 table tr th {
+  font-weight: bold;
+  text-align: start;
+  padding: 1%;
+}
+.section2 table tr td {
+  padding: 1%;
+}
+.section2 table tr:nth-child(odd) {
+  background-color: white;
+}
+footer {
+  background-color: slategray;
+  height: 10%;
+}
+footer p {
+  padding: 2%;
+  text-align: center;
 }
