@@ -144,17 +144,29 @@ body {
 }
 div.container {
   padding: 0 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 div.container .top-nav {
   display: flex;
   justify-content: end;
   padding: 2% 0;
 }
+@media (max-width: 500px) {
+  div.container .top-nav {
+    justify-content: space-evenly;
+  }
+}
 div.container .top-nav nav {
   display: flex;
   justify-content: space-between;
   width: 35%;
   font-family: 'Lato', sans-serif;
+}
+@media (max-width: 500px) {
+  div.container .top-nav nav {
+    width: 100%;
+  }
 }
 div.container .top-nav nav a {
   text-decoration: none;
@@ -170,17 +182,12 @@ div.container .top-nav nav a:link {
 div.container .top-nav nav a:visited {
   color: black;
 }
-@media (max-width: 500p) {
-  div.container .top-nav {
-    justify-content: center;
-  }
-}
 div.container header {
   background-color: #d1e4f8;
   padding: 6% 3%;
 }
 div.container header img {
-  width: 40%;
+  width: 100%;
   image-orientation: from-image;
 }
 div.container header div.title h1 {
@@ -221,10 +228,16 @@ div.container header div.collab-part a:hover {
 div.container .section1 {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 3% 0;
 }
 div.container .section1 .paragraph {
   width: 48%;
+}
+@media (max-width: 500px) {
+  div.container .section1 .paragraph {
+    width: 98%;
+  }
 }
 div.container .section1 .paragraph h2 {
   font-size: 1.6rem;
@@ -236,6 +249,11 @@ div.container .section1 .paragraph p {
 }
 div.container .section1 .list {
   width: 48%;
+}
+@media (max-width: 500px) {
+  div.container .section1 .list {
+    width: 98%;
+  }
 }
 div.container .section1 .list h3 {
   font-size: 1.3rem;

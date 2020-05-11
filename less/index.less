@@ -63,6 +63,8 @@ html, body {
 @main-color:rgb(209, 228, 248);
 @accent-color: rgb(202, 214, 226);
 @main-font:'Lato', sans-serif;
+
+//Mixins
 .nav-flex(){
 	display: flex;
 	justify-content: space-between;
@@ -73,17 +75,27 @@ html, body {
 	}
 }
 
+//Main Styles
 div.container{
 	padding: 0 5%;
+	max-width: 1200px;
+	margin: 0 auto;
 	//Nav Bar
 	.top-nav{
 		display: flex;
 		justify-content: end;
 		padding: 2% 0;	
+		@media(max-width:500px){
+			justify-content: space-evenly;
+
+		}//media query
 		nav{
 			.nav-flex();
 			width: 35%;
 			font-family: @main-font;
+			@media(max-width: 500px){
+				width: 100%;
+			}//media query
 			a{
 				text-decoration: none;
 				border: 2px solid white;
@@ -97,10 +109,6 @@ div.container{
 				}//:visited
 			}//a
 		}//nav
-		
-		@media(max-width:500p){
-			justify-content: center;
-		}
 	}//top-nav
 
 	//Header
@@ -109,7 +117,7 @@ div.container{
 		background-color: @main-color;
 		padding: 6% 3%;
 		img{
-			width: 40%;
+			width: 100%;
 			image-orientation: from-image;
 		}//img
 		div.title{
@@ -154,9 +162,13 @@ div.container{
 	.section1{
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		margin: 3% 0;
 		.paragraph{
 			width: 48%;
+			@media(max-width:500px){
+				width: 98%;
+			}
 			h2{
 				font-size: 1.6rem;
 				padding: 2% 0;
@@ -170,6 +182,9 @@ div.container{
 		}//.paragraph
 		.list{
 			width: 48%;
+			@media(max-width:500px){
+				width: 98%;
+			}
 			h3{
 				font-size: 1.3rem;
 				padding: 2% 0;
