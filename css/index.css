@@ -2,6 +2,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -89,6 +96,7 @@ video {
   font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
+  border: grey 2px solid;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -134,129 +142,141 @@ html,
 body {
   height: 100%;
 }
-.container {
+div.container {
   padding: 0 5%;
 }
-.top-nav {
+div.container .top-nav {
   display: flex;
   justify-content: end;
   padding: 2% 0;
 }
-.top-nav nav {
+div.container .top-nav nav {
   display: flex;
   justify-content: space-between;
   width: 35%;
+  font-family: 'Lato', sans-serif;
 }
-.top-nav nav a {
+div.container .top-nav nav a {
   text-decoration: none;
   border: 2px solid white;
   padding: 2%;
 }
-.top-nav nav a:link {
-  color: black;
-}
-.top-nav nav a:visited {
-  color: black;
-}
-.top-nav nav a:hover {
+div.container .top-nav nav a:hover {
   border: 2px solid black;
 }
-header {
+div.container .top-nav nav a:link {
+  color: black;
+}
+div.container .top-nav nav a:visited {
+  color: black;
+}
+@media (max-width: 500p) {
+  div.container .top-nav {
+    justify-content: center;
+  }
+}
+div.container header {
   background-color: #d1e4f8;
   padding: 6% 3%;
 }
-header img {
+div.container header img {
   width: 40%;
   image-orientation: from-image;
 }
-header div.title h1 {
+div.container header div.title h1 {
   font-size: 3rem;
   padding: 1% 0;
 }
-header div.title h2 {
+div.container header div.title h2 {
   font-size: 1.3rem;
   padding: 2% 0;
 }
-header hr {
+div.container header hr {
   border-top: 1px solid #cad6e2;
 }
-header div.collab-part {
+div.container header div.collab-part {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: 'Lato', sans-serif;
 }
-header div.collab-part p {
+div.container header div.collab-part p {
   margin: 2% 0;
   font-size: 1.1rem;
 }
-header div.collab-part a {
+div.container header div.collab-part a {
   background-color: slategray;
   color: white;
   padding: 1%;
   border: 2px solid #cad6e2;
   border-radius: 5px;
 }
-header div.collab-part a:hover {
-  background-color: white;
-  color: black;
+div.container header div.collab-part a:hover {
   border: 2px solid black;
 }
-.section1 {
+div.container header div.collab-part a:hover {
+  background-color: white;
+  color: black;
+}
+div.container .section1 {
   display: flex;
   justify-content: space-between;
   margin: 3% 0;
 }
-.section1 .paragraph {
+div.container .section1 .paragraph {
   width: 48%;
 }
-.section1 .paragraph h2 {
+div.container .section1 .paragraph h2 {
   font-size: 1.6rem;
   padding: 2% 0;
 }
-.section1 .list {
+div.container .section1 .paragraph p {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.25;
+}
+div.container .section1 .list {
   width: 48%;
 }
-.section1 .list h3 {
+div.container .section1 .list h3 {
   font-size: 1.3rem;
   padding: 2% 0;
 }
-.section1 .list li {
+div.container .section1 .list li {
   list-style: none;
 }
-.section1 .list li ul {
+div.container .section1 .list li ul {
+  font-family: 'Lato', sans-serif;
   padding: 2% 3%;
   border: 1px solid #cad6e2;
   border-bottom: 0;
 }
-.section1 .list li:last-child ul {
+div.container .section1 .list li:last-child ul {
   border-bottom: 1px solid #cad6e2;
 }
-.section2 {
+div.container .section2 {
   padding-bottom: 3%;
 }
-.section2 h3 {
+div.container .section2 h3 {
   font-size: 1.3rem;
   padding: 2% 0;
 }
-.section2 p {
-  line-height: 2rem;
-}
-.section2 table {
+div.container .section2 table {
   border-top: 1px solid #cad6e2;
   width: 100%;
+  font-family: 'Lato', sans-serif;
 }
-.section2 table tr {
-  background-color: #cad6e2;
+div.container .section2 table tr {
+  background-color: #d1e4f8;
 }
-.section2 table tr th {
+div.container .section2 table tr th {
   font-weight: bold;
   text-align: start;
   padding: 1%;
 }
-.section2 table tr td {
+div.container .section2 table tr td {
   padding: 1%;
 }
-.section2 table tr:nth-child(odd) {
+div.container .section2 table tr:nth-child(odd) {
   background-color: white;
 }
 footer {
